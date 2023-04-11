@@ -40,10 +40,6 @@
     <ProjectReference Include="..\Blazor\BlogZamin.EndPoint.BlazorUI\BlogZamin.EndPoint.BlazorUI.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="FilePeport\" />
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy /y /d &quot;$(ProjectDir)Packages\*.*&quot; &quot;$(ProjectDir)$(OutDir)&quot;" />
   </Target>
